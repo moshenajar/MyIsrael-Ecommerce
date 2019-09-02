@@ -1,0 +1,111 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+html,body{
+    height: 100%;
+    margin:0px;
+    padding:0px;
+}
+html {
+    font-size: 10px;
+}
+* {
+    box-sizing: border-box;
+  }
+ul {padding: 0;margin: 0;}
+ul li{list-style-type: none;}
+li {display: list-item;}
+a {text-decoration: none}
+/*img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}*/
+p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+
+/***********************************************/
+app-default-layout{
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+}
+app-header {
+    flex-shrink: 0;
+   /* background: lightblue;*/
+}
+#app-content{
+    flex: 1 0 auto;
+    //flex-shrink: 0;
+}
+
+
+
+app-footer {
+    flex-shrink: 0;
+    /*background: lightblue;*/
+}
+/***********************************************/
+
+
+
+
+
+.flex-break {
+    width: 100%;
+}
+
+.mobile-show {
+    display: none;
+}
+
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) 
+{ 
+    .test{
+        display:flex;
+        flex-direction: row;
+        height: 100%;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) 
+{
+    .test{
+        display:flex;
+        flex-direction: row;
+        height: 100%;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) 
+{ 
+    .test{
+        display:flex;
+        flex-direction: row;
+        height: 100%;
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) 
+{ 
+    .test{
+        display:flex;
+        flex-direction: row;
+        height: 100%;
+    }
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

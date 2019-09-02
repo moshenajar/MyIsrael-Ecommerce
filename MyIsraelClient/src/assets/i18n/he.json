@@ -1,0 +1,20 @@
+{
+    "HOME": {
+      "TITLE": "שלום אנגולר - תמיכה בשפות",
+      "SELECT": "שנה את השפה",
+      "LINE": "שורה:"
+    },
+    "FOOTER":[
+      {
+        "HEADER":{"GET_TO_KNOW_US":"באו תכירו אותנו"},
+        "ITEMS":{
+          "CAREERS": "משרות",
+          "BLOG":"בלוג",
+          "ABOUT_AMAZON":"על אמזון",
+          "INVESTOR_RELATIONS":"קשרי משקיעים",
+          "AMAZON_DEVICES":"מכשירי אמזון"
+        }
+      }
+    ]
+  }
+  

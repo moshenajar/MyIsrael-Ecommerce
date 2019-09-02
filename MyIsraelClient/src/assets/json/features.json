@@ -1,0 +1,13 @@
+[{
+    "id": 1,
+    "sys_creation_date": "14-08-1977",
+    "sys_update_date": "",
+    "expiration_date": "",
+    "name": "ProductTop10",
+	"description": "עד 10 מוצרים",
+    "instance": 1,
+	"additionalValue": 10,
+	"price":50
+ 
+  }
+]

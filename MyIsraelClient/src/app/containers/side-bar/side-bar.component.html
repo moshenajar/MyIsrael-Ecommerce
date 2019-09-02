@@ -1,0 +1,49 @@
+<div id="sidebar" class="sidebar">
+    <div class=side_menu_top_row>
+            <div class="nav" >
+                <div class="button active" id="btn" (click)="mobileClose()">
+                        <div class="bar top"></div>
+                        <div class="bar middle"></div>
+                        <div class="bar bottom"></div>
+                </div>
+            </div>
+    </div>
+    
+    <div  class="side_menu_user_info">
+        <div class="user_icon">
+            <svg style="display:none"></svg>
+            <img id="user_image" src="https://sso.zap.co.il/Images/Users/1216817/Picture.jpg" alt="התמונה של moshen" title class="user-avatar">
+        </div>
+        <div class="user_info">
+            <div *ngIf="isAuthenticated">
+                <p class="user_info_title">היי {{authService.getClaims().FullMame}}</p>
+                <p class="user_info_subtitle">יש לך 277 הודעות חדשות</p>
+                <a href="#" class="user_info_link">
+                    <span class="user_info_link_icon"></span>
+                    <span  class="user_info_link_text" (click)="signout()">התנתק</span>
+                </a>
+            </div>
+            <div *ngIf="!isAuthenticated">
+                    <p class="user_info_title">היי אורח</p>
+                    <div href="#" class="user_info_link">
+                        <span class="user_info_link_icon"></span>
+                        <span  class="user_info_link_text" (click)="login()">התחבר</span>
+                        <span>|</span>
+                        <span class="user_info_link_icon"></span>
+                        <span  class="user_info_link_text" (click)="registration()">הרשם</span>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="side_menu_buttons">
+        <a class="side_menu_btn">מועדפים</a>
+        <a class="side_menu_btn">עדכון פרטים</a>
+        <a *ngIf="isAuthenticated && !isCustomer" class="side_menu_btn side_menu_btn_last">צור חשבון עסקי</a>
+        <a *ngIf="isAuthenticated && isCustomer" class="side_menu_btn side_menu_btn_last">הוספת מוצרים</a>
+    </div>
+    <ul class="side_menu_list">
+        <li class="side_menu_list_row"><a href="#" class="side_menu_list_row_link" routerLink="/products" routerLinkActive="active">מוצרים</a></li>
+        <li class="side_menu_list_row"><a href="#" class="side_menu_list_row_link" routerLink="/portfolios" routerLinkActive="active">בעלי מקצוע</a></li>
+        <li class="side_menu_list_row"><a href="#" class="side_menu_list_row_link" routerLink="/sites" routerLinkActive="active">בתי עסק</a></li>
+    </ul>
+</div>

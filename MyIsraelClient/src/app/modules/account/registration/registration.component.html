@@ -1,0 +1,121 @@
+<header>
+  <h1>טפסים</h1>
+  <small>
+      <p>
+          הרשמה לאתר
+      </p>
+      <p>&nbsp;</p>
+  </small>
+
+</header>
+<div class="main-content">
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+  <div formGroupName="userData">
+      <div class="form-group">
+        <label for="firstname">שם פרטי:</label>
+        <input 
+          type="text"
+          id="firstname"
+          formControlName="firstname"
+          class="input-control">
+          <!-- {{signupForm.get('userData.username').errors | json}} -->
+        <div *ngIf="signupForm.get('userData.firstname')?.errors && signupForm.get('userData.firstname').touched">
+          <span 
+          class="help-block">{{getErrorMessage(signupForm.get('userData.firstname').errors)}}</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="lastname">שם משפחה:</label>
+        <input 
+          type="text"
+          id="lastname"
+          formControlName="lastname"
+          class="input-control">
+        <div *ngIf="signupForm.get('userData.lastname')?.errors && signupForm.get('userData.lastname').touched">
+          <span 
+          class="help-block">{{getErrorMessage(signupForm.get('userData.lastname').errors)}}</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="username">שם משתמש  (דוא"ל או מספר טלפון):</label>
+        <input 
+          type="text"
+          id="username"
+          formControlName="username"
+          class="input-control">
+        <div *ngIf="signupForm.get('userData.username')?.errors && signupForm.get('userData.username').touched">
+          <span 
+          class="help-block">{{getErrorMessage(signupForm.get('userData.username').errors)}}</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="newpassword">הזן סיסמא חדשה:</label>
+        <input
+          type="password"
+          id="newpassword"
+          formControlName="newpassword"
+          class="input-control">
+          <div *ngIf="signupForm.get('userData.newpassword')?.errors && signupForm.get('userData.newpassword').touched">
+            <span 
+            class="help-block">{{getErrorMessage(signupForm.get('userData.newpassword').errors)}}</span>
+          </div>
+      </div>
+      <div class="form-group">
+          <mat-form-field>
+              <input 
+              id="birthday"
+              formControlName="birthday"
+              matInput [matDatepicker]="picker" 
+              placeholder="תאריך לידה:">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        <!-- <label for="birthday">תאריך לידה:</label> -->
+        <!-- <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="תאריך לידה:">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field> -->
+        <!-- <input 
+          type="text"
+          id="birthday"
+          formControlName="birthday"
+          class="input-control"> -->
+        <div *ngIf="signupForm.get('userData.birthday')?.errors && signupForm.get('userData.birthday').touched">
+          <span 
+          class="help-block">{{getErrorMessage(signupForm.get('userData.birthday').errors)}}</span>
+        </div> 
+      </div>
+      <div class="form-group">
+        <label for="gender">בחר מגדר:</label>
+        <div class="radio" *ngFor="let item of _genders | enumKeyValuelist;">
+          <label>
+            <input 
+            type="radio"
+            formControlName="gender"
+            [value] = "item.key">{{item.value}}
+          </label>
+        </div>
+        <div *ngIf="signupForm.get('userData.gender')?.errors && signupForm.get('userData.gender').touched">
+          <span 
+          class="help-block">{{getErrorMessage(signupForm.get('userData.gender').errors)}}</span>
+        </div>
+      </div>
+  </div>
+  
+  <button type="submit" [disabled]="!signupForm.valid">הירשם</button>
+  <button type="button" (click)="onReset()">נקה</button>
+  <div *ngIf="Status == 1">
+      <span 
+      class="help-block">נוצר בהצלחה</span>
+  </div>
+  <div *ngIf="Status == 2">
+      <span 
+      class="help-block"> נכשלה הפעולה</span>
+  </div>
+
+ 
+ 
+
+</form>
+</div>

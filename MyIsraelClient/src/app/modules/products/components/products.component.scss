@@ -1,0 +1,30 @@
+.Container
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-color: brown;
+    width: 100vw;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50vw;
+  }
+
+// .Container>div
+// {
+//     height: 300px;
+//     width: 300px;
+//     background-color: blueviolet;
+//     margin: 3px;
+// }

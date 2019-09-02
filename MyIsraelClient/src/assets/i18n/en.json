@@ -1,0 +1,22 @@
+{
+    "HOME": {
+      "TITLE": "Hello Angular with ngx-translate!",
+      "SELECT": "Change language",
+      "LINE": "line:"
+    },
+
+    "FOOTER":[
+      {
+        "HEADER":{"GET_TO_KNOW_US":"Get to Know Us"},
+			    "ITEMS":{
+			      "CAREERS": "Careers",
+            "BLOG":"Blog",
+            "ABOUT_AMAZON":"About Amazon",
+            "INVESTOR_RELATIONS":"Investor Relations",
+            "AMAZON_DEVICES":"Amazon Devices"
+			    }
+      }
+    ]
+  }
+  
+ 

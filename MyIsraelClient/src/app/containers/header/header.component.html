@@ -1,0 +1,43 @@
+<div style="background-color: yellow; color: red;font-size: 18px;">isAuthenticated = {{isAuthenticated}}</div>
+
+<header>
+
+    
+
+
+    <div class="burger">
+            <nav>
+                    <div class="nav-right " (click)="toggle2()">
+                        <div class="button" id="btn">
+                        <div class="bar top"></div>
+                        <div class="bar middle"></div>
+                        <div class="bar bottom"></div>
+                        </div>
+                    </div>
+                <!-- nav-right -->
+            </nav>
+
+            <!--<div class="nav-right visible-xs">
+                    <div class="button" id="btn" (click)="toggle()"> 
+                            <div class="bar top"></div>
+                            <div class="bar middle"></div>
+                            <div class="bar bottom"></div>
+                    </div>
+            </div>-->
+    </div>
+    <a class="logo" routerLink="" routerLinkActive="active">ישראל שלי</a>
+    <div class="Search"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path fill="none" fill-rule="evenodd" stroke="#f64c72" stroke-width="2" d="M6.999.998a6 6 0 1 1-.001 12.001A6 6 0 0 1 6.999.998zM10.999 9.999l4.999 6"></path></svg></div> 
+    
+    <div class="d flex-break mobile-show"></div>
+    
+    <div class="c" style="display:none">
+        <select #langSelect (change)="switchLanguage(langSelect.value)">
+                <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+        </select>
+        
+    </div>
+    
+    
+      
+    
+</header>
